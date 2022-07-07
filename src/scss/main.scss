@@ -1,0 +1,15 @@
+//general conf and vars
+@import "./_conf";
+@import "./global";
+
+//components
+@import "../component/layout/layout.scss";
+@import "../component/logo/logo.scss";
+@import "../component/indicator/indicator.scss";
+@import "../component/graph/circle_dia/circle.scss";
+@import "../component/graph/curve/curve.scss";
+@import "../component/graph/histogram/histogram.scss";
+@import "../component/graph/radar/radar.scss";
+
+//pages
+@import "../pages/My_home/My_home.scss";
