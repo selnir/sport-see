@@ -27,7 +27,7 @@ function My_home() {
   const glucides=main_data.keyData.carbohydrateCount+"gr";
   const lipides=main_data.keyData.lipidCount+"gr";
 
-    return (<section className="My_home"><header className="header_profile"><h1>Bonjour</h1><h1> {main_data.userInfos.firstName}</h1><p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p></header>
+    return (<section className="My_home"><header className="header_profile"><div className="wrapper_welcome"><h1>Bonjour</h1><h1 className="firstname"> {main_data.userInfos.firstName}</h1></div><p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p></header>
     <section className="wrapper_chart">
     <Barweight databar={data_act.sessions}></Barweight>
     </section>
