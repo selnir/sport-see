@@ -1,32 +1,32 @@
-.My_home{
 
+
+.My_home{
   color:black;
   width: 100%;
-  border-style: solid;
   display: flex;
   flex-wrap: wrap;
-  height: max-content;
-
+  height: 100%;
   .header_profile{
-    border-style: solid;
     width: 100%;
     .wrapper_welcome{
-
       display: flex;
-
+      font-size: 48px;
+      p{
+        font-size: 18px;
+      }
       .firstname{
-
-        
-
+        color:red;
       }
 
     }
   }
   .wrapper_chart{
-    border-style: solid;
+    display: flex;
     width: 80%;
+    flex-wrap: wrap;
   }
   .wrapper_indi{
+    width: 20%;
   }
 
 }

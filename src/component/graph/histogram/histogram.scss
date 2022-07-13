@@ -1,6 +1,6 @@
 .wrapper_bar{
     width: 100%;
-    height: 100%;
+    height: 50%;
 }
 .title_bar{
 
@@ -8,4 +8,49 @@
     top: 24px;
     ;
 
+}
+.wrapper_legend{
+
+    width: 100%;
+    display: flex;
+    justify-content: end;
+
+}
+.legend_bar{
+    display: flex;
+    list-style-type: none;
+    width: 50%;
+    justify-content: space-around;
+    li{
+        display: flex;
+        align-items: center;
+        div{
+            margin-right: 10px;
+        }
+    }
+}
+.cercle-black { 
+    height: 10px; 
+    width: 10px; 
+    background-color: black;
+    border: 5px solid black;
+    border-radius: 50%; 
+} 
+
+.cercle-red { 
+    height: 10px; 
+    width: 10px; 
+    background-color: red;
+    border: 5px solid red;
+    border-radius: 50%; 
+} 
+.custom-tooltip{
+    padding: 10px;
+    background-color: #E60000;
+    color: white;
+    font-weight: 500;
+    .label{
+        text-align: center;
+        padding:10px
+    }
 }
