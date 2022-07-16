@@ -1,6 +1,24 @@
 import React, { PureComponent } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
+
+
+class CustomizedAxisTick extends PureComponent {
+  render() {
+    const { x, y, stroke, payload } = this.props;
+
+    return (
+      <g transform={`translate(${x},${y})`}>
+        <text x={0} y={0} dy={0} textAnchor="end" fill="#FFFFFF" opacity={0.50} padding={{ left: 20, right: 20 }}>
+          {payload.value}
+        </text>
+      </g>
+    );
+  }
+}
+
+
+
 const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
       return (
@@ -48,7 +66,7 @@ const Timeline = (props) => {
   return (
     <div className='wrapper_graph'>
 
-    <ResponsiveContainer>
+    <ResponsiveContainer aspect={1}>
     <LineChart data={datamod} >
     <defs>
       <linearGradient id="gradient" x1="0" y1="0" x2="100%" y2="0">
@@ -59,10 +77,10 @@ const Timeline = (props) => {
       
       
       <CartesianGrid vertical={false} horizontal={false}    />
-      <XAxis dataKey="day" tick={{ fill: '#FFFFFF' }} interval={"preserveStartEnd"}  stroke={false} style={{ textAnchor: 'end' }}/>
+    <XAxis dataKey="day" minTickGap={1} stroke={false} interval={`preserveStartEnd`} tick={<CustomizedAxisTick/>} tickMargin={10}    domain={['dataMin', 'dataMax']}/>
       <YAxis hide="true"/>
       <Tooltip content={<CustomTooltip />} cursor={false} />
-      <Line type="monotone" dataKey="sessionLength" dot={false} tick={{ fill: '#FFFFFF' }} strokeLinecap="round" stroke="url(#gradient)"/>
+      <Line type="monotone" dataKey="sessionLength" dot={false} tick={{ fill: '#FFFFFF' }} strokeWidth={2} strokeLinecap="round" stroke="url(#gradient)" padding={{ left: 0, right: 0 }}/>
     </LineChart>
   </ResponsiveContainer></div>
   );

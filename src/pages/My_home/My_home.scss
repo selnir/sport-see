@@ -3,11 +3,47 @@
 .My_home{
   color:black;
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  height: 100%;
+  border-style: solid;
+  display: grid;
+  grid-template-areas:
+    "wrapper_nav-v header_profile header_profile header_profile"
+    "wrapper_nav-v wrapper_chart wrapper_chart wrapper_indi"
+    "wrapper_nav-v wrapper_chart wrapper_chart wrapper_indi";
+
+  .wrapper_nav-v{
+    grid-area:wrapper_nav-v;
+
+    background-color: black;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    padding-left: 27px;
+    padding-right: 27px;
+    height: 100%;
+    
+        .nav-v{
+            display: flex;
+            flex-direction: column;
+            background-color: black;
+            width:max-content;
+            justify-content: space-around;
+            img{
+                margin:20px;
+                width: 64px;
+                height: 64px;
+            }
+        }
+        .copright{
+            position:relative;
+            writing-mode:sideways-lr;
+            color: white;
+            }
+    }
   .header_profile{
     width: 100%;
+    grid-area:header_profile;
     .wrapper_welcome{
       display: flex;
       font-size: 48px;
@@ -21,12 +57,17 @@
     }
   }
   .wrapper_chart{
+    grid-area:wrapper_chart;
+
     display: flex;
-    width: 80%;
     flex-wrap: wrap;
   }
   .wrapper_indi{
-    width: 20%;
+    grid-area:wrapper_indi;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
   }
 
 }

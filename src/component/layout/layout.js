@@ -5,8 +5,8 @@ import Logo from "../logo/logo"
 
 const Layout = () => {
   return (
-   <> <section className="wrapper">
-          <section className="header">
+   <section className="wrapper">
+      <section className="header">
 
       <Logo></Logo>
       <nav>
@@ -26,20 +26,10 @@ const Layout = () => {
         </ul>
       </nav>
       </section>
-      <div className="wrapper_page">
-    <div className="wrapper_nav-v">
-      <nav className="nav-v">
-        <img src="/meditation.png" alt="KASA"></img>
-        <img src="/muscu.png" alt="KASA"></img>
-        <img src="/natation.png" alt="KASA"></img>
-        <img src="/velo.png" alt="KASA"></img>
-      </nav>  
-      <p className="copright">Copiryght, SportSee 2020</p>
-    </div>      <Outlet />
-</div>
+    <Outlet />
 
-    </section>      
-</>
+   
+</section>
   )
 };
 
