@@ -1,14 +1,13 @@
 
 
 .My_home{
-  color:black;
   width: 100%;
-  border-style: solid;
+  height:90%;
   display: grid;
   grid-template-areas:
-    "wrapper_nav-v header_profile header_profile header_profile"
-    "wrapper_nav-v wrapper_chart wrapper_chart wrapper_indi"
-    "wrapper_nav-v wrapper_chart wrapper_chart wrapper_indi";
+    "wrapper_nav-v header_profile header_profile header_profile header_profile"
+    "wrapper_nav-v wrapper_bar wrapper_bar wrapper_bar wrapper_indi"
+    "wrapper_nav-v wrapper_graph wrapper_radar . wrapper_indi";
 
   .wrapper_nav-v{
     grid-area:wrapper_nav-v;
@@ -21,7 +20,6 @@
     align-items: center;
     padding-left: 27px;
     padding-right: 27px;
-    height: 100%;
     
         .nav-v{
             display: flex;
@@ -56,12 +54,7 @@
 
     }
   }
-  .wrapper_chart{
-    grid-area:wrapper_chart;
 
-    display: flex;
-    flex-wrap: wrap;
-  }
   .wrapper_indi{
     grid-area:wrapper_indi;
     display: flex;

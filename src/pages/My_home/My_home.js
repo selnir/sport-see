@@ -6,7 +6,7 @@ import Timeline from "../../component/graph/curve/curve";
 import RadarProfile from "../../component/graph/radar/radar";
 
 
-const id=12;
+const id=18;
 
 const main_data=USER_MAIN_DATA.find(function (data) {
   if(data.id===id){
@@ -52,11 +52,9 @@ function My_home() {
         <p className="copright">Copiryght, SportSee 2020</p>
       </div>  
       <header className="header_profile"><div className="wrapper_welcome"><h1>Bonjour</h1><h1 className="firstname"> {main_data.userInfos.firstName}</h1></div><p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p></header>
-      <section className="wrapper_chart">
       <Barweight databar={data_act.sessions}></Barweight>
       <Timeline dataline={data_time.sessions}></Timeline>
       <RadarProfile dataradar={data_perf.data}></RadarProfile>
-      </section>
       <aside className="wrapper_indi">
       <Indicator img="/calories-icon.png" name="calories" value={calories}></Indicator>
       <Indicator img="/protein-icon.png" name="Proteines" value={proteines}></Indicator>

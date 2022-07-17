@@ -88,7 +88,7 @@ const RadarProfile = (props) => {
   return (
     <div className='wrapper_radar'>
 
-        <ResponsiveContainer width="100%" height="100%">
+        <ResponsiveContainer>
         <RadarChart cx="50%" cy="50%" outerRadius="60%" data={props.dataradar} paddingAngle={1000}>
           <PolarGrid radialLines={false} strokeWidth={2} />
           <PolarAngleAxis dataKey="kind" tick={<CustomizedAxisTick/>} />
