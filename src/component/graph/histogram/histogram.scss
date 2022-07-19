@@ -1,20 +1,20 @@
 .wrapper_bar{
     width: 100%;
     grid-area:wrapper_bar;
+    background-color: #FBFBFB;
+    border-radius: 5px;
+    padding:20px;
 
 }
-.title_bar{
 
-    position: relative;
-    top: 24px;
-    ;
-
-}
 .wrapper_legend{
 
     width: 100%;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
+    h1{
+        color: #20253A;
+    }
 
 }
 .legend_bar{
@@ -22,6 +22,7 @@
     list-style-type: none;
     width: 50%;
     justify-content: space-around;
+    color: #9B9EAC;
     li{
         display: flex;
         align-items: center;
