@@ -1,33 +1,6 @@
 import React,{PureComponent}from 'react';
 
 import { BarChart, Bar, CartesianGrid, XAxis, YAxis,Legend,ResponsiveContainer, Tooltip,Label } from 'recharts';
-class CustomizedxAxisTick extends PureComponent {
-  render() {
-    const { x, y, payload } = this.props;
-
-    return (
-      <g transform={`translate(${x},${y})`}>
-        <text x={0} y={0} dy={20} textAnchor="middle" height={30} opacity={0.50} >
-          {payload.value}
-        </text>
-      </g>
-    );
-  }
-}
-
-class CustomizedyAxisTick extends PureComponent {
-  render() {
-    const { x, y, payload } = this.props;
-
-    return (
-      <g transform={`translate(${x},${y})`}>
-        <text x={50} y={0} dy={20} textAnchor="middle" opacity={0.50} >
-          {payload.value}
-        </text>
-      </g>
-    );
-  }
-}
 
 const CustomTooltip = ({ active, payload, label }) => {
   if (active && payload && payload.length) {

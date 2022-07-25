@@ -97,7 +97,7 @@ const CustomTooltip = ({ active, payload }) => {
     const { points, width, height, stroke } = props;
     const { x, y } = points[0];
     const { x1, y1 } = points[1];
-    return <Rectangle  x={x} y={y} width={width} height={height+150} fill="#FFFFFF" stroke="#FFFFFF" opacity={0.19}/>;
+    return <Rectangle  x={x} y={y} width={width} height={height+150} fill="#000000" stroke="#000000" opacity={0.19}/>;
 };
 
 const Timeline = (props) => {

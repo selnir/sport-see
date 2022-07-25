@@ -4,9 +4,10 @@ import {USER_MAIN_DATA,USER_ACTIVITY,USER_AVERAGE_SESSIONS,USER_PERFORMANCE} fro
 import Barweight from "../../component/graph/histogram/histogram";
 import Timeline from "../../component/graph/curve/curve";
 import RadarProfile from "../../component/graph/radar/radar";
+import Circle from "../../component/graph/circle_dia/circle";
 
 
-const id=18;
+const id=12;
 
 const main_data=USER_MAIN_DATA.find(function (data) {
   if(data.id===id){
@@ -44,17 +45,18 @@ function My_home() {
     <section className="My_home">    
       <div className="wrapper_nav-v">
         <nav className="nav-v">
-          <img src="/meditation.png" alt="KASA"></img>
-          <img src="/muscu.png" alt="KASA"></img>
-          <img src="/natation.png" alt="KASA"></img>
-          <img src="/velo.png" alt="KASA"></img>
+          <img src="/meditation.png" alt="meditation"></img>
+          <img src="/muscu.png" alt="muscu"></img>
+          <img src="/natation.png" alt="natation"></img>
+          <img src="/velo.png" alt="velo"></img>
         </nav>  
         <p className="copright">Copiryght, SportSee 2020</p>
       </div>  
-      <header className="header_profile"><div className="wrapper_welcome"><h1>Bonjour</h1><h1 className="firstname"> {main_data.userInfos.firstName}</h1></div><p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p></header>
+      <header className="header_profile"><div className="wrapper_welcome"><h1>Bonjour </h1><h1 className="firstname"> {main_data.userInfos.firstName}</h1></div><p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p></header>
       <Barweight databar={data_act.sessions}></Barweight>
       <Timeline dataline={data_time.sessions}></Timeline>
       <RadarProfile dataradar={data_perf.data}></RadarProfile>
+      <Circle datacircle={main_data}></Circle>
       <aside className="wrapper_indi">
       <Indicator img="/calories-icon.png" name="calories" value={calories}></Indicator>
       <Indicator img="/protein-icon.png" name="Proteines" value={proteines}></Indicator>
