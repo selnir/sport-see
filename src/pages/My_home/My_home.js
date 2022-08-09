@@ -5,15 +5,11 @@ import Barweight from "../../component/graph/histogram/histogram";
 import Timeline from "../../component/graph/curve/curve";
 import RadarProfile from "../../component/graph/radar/radar";
 import Circle from "../../component/graph/circle_dia/circle";
+import useFetch from "../../tools/useFetch";
 
 
 const id=12;
 
-const main_data=USER_MAIN_DATA.find(function (data) {
-  if(data.id===id){
-    return data;
-  }
-});  
 
 const data_act=USER_ACTIVITY.find(function (data_act) {
   if(data_act.userId===id){
@@ -35,13 +31,14 @@ const data_perf=USER_PERFORMANCE.find(function (data_perf) {
 
 function My_home() {
 
+  const main_data =useFetch("http://localhost:3000/user/12");
 
-  const calories=main_data.keyData.calorieCount+"kcal";
-  const proteines=main_data.keyData.proteinCount+"gr";
-  const glucides=main_data.keyData.carbohydrateCount+"gr";
-  const lipides=main_data.keyData.lipidCount+"gr";
+  const calories=main_data.data.keyData.calorieCount+"kcal";
+  const proteines=main_data.data.keyData.proteinCount+"gr";
+  const glucides=main_data.data.keyData.carbohydrateCount+"gr";
+  const lipides=main_data.data.keyData.lipidCount+"gr";
 
-    return (
+return (
     <section className="My_home">    
       <div className="wrapper_nav-v">
         <nav className="nav-v">
@@ -52,11 +49,11 @@ function My_home() {
         </nav>  
         <p className="copright">Copiryght, SportSee 2020</p>
       </div>  
-      <header className="header_profile"><div className="wrapper_welcome"><h1>Bonjour </h1><h1 className="firstname"> {main_data.userInfos.firstName}</h1></div><p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p></header>
+      <header className="header_profile"><div className="wrapper_welcome"><h1>Bonjour </h1><h1 className="firstname"> {main_data.data.userInfos.firstName}</h1></div><p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p></header>
       <Barweight databar={data_act.sessions}></Barweight>
       <Timeline dataline={data_time.sessions}></Timeline>
       <RadarProfile dataradar={data_perf.data}></RadarProfile>
-      <Circle datacircle={main_data}></Circle>
+      <Circle datacircle={main_data.data}></Circle>
       <aside className="wrapper_indi">
       <Indicator img="/calories-icon.png" name="calories" value={calories}></Indicator>
       <Indicator img="/protein-icon.png" name="Proteines" value={proteines}></Indicator>
