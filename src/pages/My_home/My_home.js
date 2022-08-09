@@ -32,7 +32,7 @@ const data_perf=USER_PERFORMANCE.find(function (data_perf) {
 function My_home() {
 
   const main_data =useFetch("http://localhost:3000/user/12");
-
+if(main_data){
   const calories=main_data.data.keyData.calorieCount+"kcal";
   const proteines=main_data.data.keyData.proteinCount+"gr";
   const glucides=main_data.data.keyData.carbohydrateCount+"gr";
@@ -62,7 +62,7 @@ return (
       </aside>
       
     </section>
-    );
+    );}
     }
     export default My_home;
 
