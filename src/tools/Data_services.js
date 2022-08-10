@@ -3,24 +3,23 @@ import useFetch from "./useFetch";
 
 function GetData(id) {
 
-    let data_conv=null;
+    let data=null;
     
-    this.main_data = useFetch(`http://localhost:3000/user/${id}`);;
-    this.data_act = useFetch(`http://localhost:3000/user/${id}/activity`);
-    this.data_time = useFetch(`http://localhost:3000/user/${id}/average-sessions`);
-    this.data_perf = useFetch(`http://localhost:3000/user/${id}/performance`);
-    this.checkdata = function() {
-        if (this.main_data && this.data_act && this.data_perf && this.data_time) 
+    const main_data = useFetch(`http://localhost:3000/user/${id}`);;
+    const data_act = useFetch(`http://localhost:3000/user/${id}/activity`);
+    const data_time = useFetch(`http://localhost:3000/user/${id}/average-sessions`);
+    const data_perf = useFetch(`http://localhost:3000/user/${id}/performance`);
+    
+        if (main_data && data_act && data_perf && data_time) 
         {
-                        return data_conv=[
-                        this.main_data.data,
-                        this.data_act.data,
-                        this.data_time.data,
-                        this.data_perf.data
-                    ] 
+                        return data=[main_data.data,
+                            data_act.data,
+                            data_time.data,
+                            data_perf.data] 
+                    
                 }
     }
-}   
+ 
  export default GetData;
 
 
