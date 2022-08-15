@@ -6,8 +6,7 @@ const route=
 
 <BrowserRouter key="Routersportsee">
         <Routes >
-          <Route path="/" element={<Layout />}>
-          <Route index  element={<My_home />} />
+          <Route index  element={<My_home />} >
 
           </Route>
         </Routes>

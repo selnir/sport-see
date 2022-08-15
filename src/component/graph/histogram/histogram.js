@@ -36,17 +36,17 @@ const Barweight = (props) => {
 return (
   <div className='wrapper_bar'>
     <ResponsiveContainer>
-          <BarChart data={datamod} margin={{ top:0, right: 0, left: 0, bottom: 0 }} >
+          <BarChart data={datamod} margin={{ top:0, right: 10, left: 10, bottom: 10 }} >
     <CartesianGrid vertical={false} stroke="#ccc " strokeWidth={1} strokeDasharray={3} />
     <YAxis yAxisId="left" hide="false" orientation="left" />
     <YAxis yAxisId="right" tickLine={false} orientation="right" tickMargin={10} stroke={false} tick={{ fill: '#9B9EAC' }} domain={['dataMin-3', 'dataMax+1']}></YAxis>
-    <XAxis dataKey="day" tickLine={false} tickMargin={10} stroke='#9B9EAC' tick={{ fill: '#9B9EAC' }} >  </XAxis>
+    <XAxis dataKey="day"  tickLine={false} tickMargin={10} stroke='#9B9EAC' tick={{ fill: '#9B9EAC' }} >  </XAxis>
     <Tooltip content={<CustomTooltip />} wrapperStyle={{ backgroundColor: '#E60000' }}></Tooltip>
 
     <Legend payload={[
       { id: 'kilogram', value: 'Poids (kg)'},
       { id: 'calories', value: 'Calories brûlées (kCal)'},]}
-       height="50px" verticalAlign="top"  align="right"
+       height="100px" verticalAlign="top"  align="right"
        content={renderLegend}>
        </Legend>
           <Bar yAxisId="left" dataKey="calories" barSize={10} fill="#282D30" radius={[5, 5, 0, 0]}  ></Bar>

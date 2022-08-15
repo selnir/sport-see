@@ -4,8 +4,8 @@ import Barweight from "../../component/graph/histogram/histogram";
 import Timeline from "../../component/graph/curve/curve";
 import RadarProfile from "../../component/graph/radar/radar";
 import Circle from "../../component/graph/circle_dia/circle";
-import useFetch from "../../tools/useFetch";
 import GetData from "../../tools/Data_services";
+import Layout from "../../component/layout/layout";
 
 
 const id=12;
@@ -26,7 +26,9 @@ if(dataconv){
   const lipides=main_data.keyData.lipidCount+"gr";
 
 return (
-    <section className="My_home">    
+    <section className="My_home">
+            <div className="wrapper_header"><Layout></Layout></div>    
+
       <div className="wrapper_nav-v">
         <nav className="nav-v">
           <img src="/meditation.png" alt="meditation"></img>

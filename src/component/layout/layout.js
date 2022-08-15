@@ -7,7 +7,6 @@ const Layout = () => {
   return (
    <section className="wrapper">
       <section className="header">
-
       <Logo></Logo>
       <nav>
         <ul>
@@ -27,8 +26,6 @@ const Layout = () => {
       </nav>
       </section>
     <Outlet />
-
-   
 </section>
   )
 };
