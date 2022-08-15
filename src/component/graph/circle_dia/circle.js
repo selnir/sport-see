@@ -39,7 +39,7 @@ const Circle = (props) => {
           innerRadius="80%"
           outerRadius="90%"
           data={data} 
-          startAngle={180} 
+          startAngle={220} 
           endAngle={-360}
         >
           <PolarAngleAxis type="number" domain={[0, 100]} angleAxisId={0} tick={false} />

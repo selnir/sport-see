@@ -8,14 +8,14 @@ import useFetch from "../../tools/useFetch";
 import GetData from "../../tools/Data_services";
 
 
-const id=18;
+const id=12;
 
 function My_home() {
 
   const dataconv=GetData(id);
 
-
 if(dataconv){
+
   const main_data =dataconv[0];
   const data_act =dataconv[1];
   const data_time =dataconv[2];

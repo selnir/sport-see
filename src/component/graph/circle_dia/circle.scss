@@ -1,14 +1,16 @@
 .wrapper_circle{
-    width: 100%;
+
     grid-area:wrapper_circle;
     background-color: #FBFBFB;
+    width: 260px;
     .score{
 
             font-size: 15px;
+            font-weight: 500;
             color: #20253A;
             position: relative;
-            top:15%;
-            left: 15%;
+            top:10%;
+            left: 5%;
             width: max-content;
     }
     .objectif{

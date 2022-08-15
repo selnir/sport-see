@@ -10,8 +10,7 @@
     "wrapper_nav-v wrapper_graph wrapper_radar wrapper_circle wrapper_indi"
     "wrapper_nav-v . . . .";
     
-
-    gap: 3em;
+    row-gap: 3em;
 
   .wrapper_nav-v{
     grid-area:wrapper_nav-v;
@@ -47,15 +46,19 @@
     width: 100%;
     grid-area:header_profile;
     margin-top: 3em;
+    padding-bottom: 100px;
+    p{
+      padding-top: 50px;
+      font-size: 18px;
+    }
 
     .wrapper_welcome{
       display: flex;
       font-size: 48px;
-      p{
-        font-size: 18px;
-      }
+
       .firstname{
         color:red;
+        padding-left: 20px;
       }
 
     }

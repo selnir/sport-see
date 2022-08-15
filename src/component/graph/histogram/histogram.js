@@ -26,9 +26,6 @@ const renderLegend = (props) => {
       <li key={`item-${payload[1].id}`}><div class="cercle-red"></div>{payload[1].value}</li>
     </ul></div>
   );}
-
-
-  
 const Barweight = (props) => {
   const datamod=props.databar.map((data,index)=>{
   
@@ -38,8 +35,8 @@ const Barweight = (props) => {
 
 return (
   <div className='wrapper_bar'>
-    <ResponsiveContainer >
-          <BarChart data={datamod} margin={{ top: 0, right: 0, left: 0, bottom: 0 }} >
+    <ResponsiveContainer>
+          <BarChart data={datamod} margin={{ top:0, right: 0, left: 0, bottom: 0 }} >
     <CartesianGrid vertical={false} stroke="#ccc " strokeWidth={1} strokeDasharray={3} />
     <YAxis yAxisId="left" hide="false" orientation="left" />
     <YAxis yAxisId="right" tickLine={false} orientation="right" tickMargin={10} stroke={false} tick={{ fill: '#9B9EAC' }} domain={['dataMin-3', 'dataMax+1']}></YAxis>

@@ -1,5 +1,6 @@
-import { useParams } from "react-router-dom";
 import useFetch from "./useFetch";
+import PropTypes from 'prop-types';
+
 
 function GetData(id) {
 
@@ -18,6 +19,9 @@ function GetData(id) {
                             data_perf.data] 
                     
                 }
+    }
+    GetData.PropTypes={
+        id: PropTypes.string
     }
  
  export default GetData;

@@ -106,7 +106,7 @@ const Timeline = (props) => {
   return (
     <div className='wrapper_graph'>
  
-    <ResponsiveContainer>
+    <ResponsiveContainer aspect={1}>
     <LineChart data={props.dataline} margin={{ top: 0, right: 0, bottom: 0, left: 0 }}>
     <defs>
       <linearGradient id="gradient" x1="0" y1="0" x2="100%" y2="0">
@@ -125,7 +125,7 @@ const Timeline = (props) => {
   </ResponsiveContainer></div>
   );
   }
-    
+  
+  
+
   export default Timeline;
-  // cursor={{ stroke: '#000000', strokeWidth: "2",opacity: 0.1 }}
-  // tick={<CustomizedAxisTick/>}

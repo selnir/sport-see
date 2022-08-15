@@ -10,34 +10,38 @@ class CustomizedAxisTick extends PureComponent {
 
       switch (payload.value) {
         case "Cardio":
-            coordy=-5;
-            coordx=0;
-            anchor="middle"              
+          coordy=5;
+          coordx=0;
+          anchor="end" 
+                        
         break;
         case "Energie" :
-            coordy=-0;
-            coordx=5;
-            anchor="start"              
+          coordy=5;
+          coordx=0;
+          anchor="end"               
             break;
         case "Endurance":
-            coordy=-0;
-            coordx=5;
-            anchor="start"             
+          coordy=10;
+            coordx=0;
+            anchor="middle"
+                      
             break;
         case "Force":
-            coordy=10;
-            coordx=0;
-            anchor="middle"              
+          coordy=5;
+          coordx=0;
+          anchor="start"              
             break;
         case "Vitesse":
-            coordy=-0;
-            coordx=-5;
-            anchor="end"               
+          coordy=5;
+            coordx=0;
+            anchor="start" 
+                        
         break;
         case "Intensité" :
-            coordy=-0;
-            coordx=-5;
-            anchor="end"           
+          coordy=-5;
+            coordx=0;
+            anchor="middle"  
+                     
         break;
 
         default:
@@ -88,12 +92,12 @@ const RadarProfile = (props) => {
   return (
     <div className='wrapper_radar'>
 
-        <ResponsiveContainer>
-        <RadarChart cx="50%" cy="50%" outerRadius="60%" data={props.dataradar} paddingAngle={1000}>
-          <PolarGrid radialLines={false} strokeWidth={2} />
+        <ResponsiveContainer aspect={1}>
+        <RadarChart cx="50%" cy="50%" outerRadius="60%" data={props.dataradar} paddingAngle={1000} startAngle="-150" endAngle="210">          
+        <PolarGrid radialLines={false} strokeWidth={2} />
           <PolarAngleAxis dataKey="kind" tick={<CustomizedAxisTick/>} />
           <Label alue="Pages of my website" offset={0} position="insideBottom"></Label>
-          <Radar dataKey="value"  stroke="#FF0101B2" fill="#FF0101B2" fillOpacity={0.7} />
+          <Radar dataKey="value" fill="#FF0101B2" fillOpacity={0.99} />
         </RadarChart>
       </ResponsiveContainer></div>  );
 
