@@ -2,6 +2,11 @@ import useFetch from "./useFetch";
 import PropTypes from 'prop-types';
 
 
+/**
+ * GetData
+ * @param {number} id User Identification
+ */
+
 function GetData(id) {
 
     let data=null;

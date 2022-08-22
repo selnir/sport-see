@@ -19,16 +19,25 @@ class CustomLabel extends PureComponent{
 }
 
 const Circle = (props) => {
+  let data = [
+    {
+      uv: props.datacircle.todayScore*100,
+      fill: '#ff0000',
+    },
+  ];
 
- 
+ if(!props.datacircle.todayScore){
+
+  data = [
+    {
+      uv: props.datacircle.score*100,
+      fill: '#ff0000',
+    },
+  ];
+
+}
 
 
- const data = [
-  {
-    uv: props.datacircle.todayScore*100,
-    fill: '#ff0000',
-  },
-];
     
   return (
     <div className='wrapper_circle'>

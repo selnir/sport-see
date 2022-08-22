@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import My_home from '../pages/My_home/My_home';
-import Layout from '../component/layout/layout';
 
 const route=
 

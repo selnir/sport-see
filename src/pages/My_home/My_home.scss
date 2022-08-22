@@ -2,17 +2,29 @@
 
 .My_home{
   width: 100%;
-  height:90%;
+  height:100%;
   display: grid;
   grid-template-areas:
     "wrapper_header wrapper_header wrapper_header wrapper_header wrapper_header"
     "wrapper_nav-v header_profile header_profile header_profile header_profile"
     "wrapper_nav-v wrapper_bar wrapper_bar wrapper_bar wrapper_indi"
     "wrapper_nav-v wrapper_graph wrapper_radar wrapper_circle wrapper_indi"
-    "wrapper_nav-v . . . .";
-.wrapper_header{
-  box-shadow: 10px 5px red;
+    "wrapper_nav-v footer footer footer footer";
 
+
+
+    footer{
+
+      grid-area:footer;
+      height: 5.375rem;
+      width: 100%;
+
+
+    }
+.wrapper_header{
+  box-shadow: 5px 13px 6px -6px rgba(0,0,0,0.53);
+  -webkit-box-shadow: 5px 13px 6px -6px rgba(0,0,0,0.53);
+  -moz-box-shadow: 5px 13px 6px -6px rgba(0,0,0,0.53);
 
   grid-area:wrapper_header;
 
@@ -24,7 +36,7 @@
     width: max-content;
     display: flex;
     flex-direction: column;
-    justify-content:center;
+    justify-content:space-around;
     align-items: center;
     width:7.3125rem;
     margin-right:6.875rem;
@@ -44,7 +56,6 @@
             }
         }
         .copright{
-            position:absolute;
             writing-mode:sideways-lr;
             color: white;
             }

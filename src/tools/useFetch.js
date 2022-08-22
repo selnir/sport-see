@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import PropTypes from 'prop-types';
 
-
+/**
+ * useFetch
+ * @param {string} url adress to be reach
+ */
 
 const useFetch = url => {
     const [data, setData] = useState(null);

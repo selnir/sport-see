@@ -49,7 +49,7 @@ return (
       <Indicator img="/carbs-icon.png" name="Glucides" value={glucides}></Indicator>
       <Indicator img="/fat-icon.png" name="Lipides" value={lipides}></Indicator>
       </aside>
-      
+      <footer></footer>
     </section>
     );
     }}
