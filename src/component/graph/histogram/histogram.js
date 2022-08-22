@@ -26,6 +26,15 @@ const renderLegend = (props) => {
       <li key={`item-${payload[1].id}`}><div class="cercle-red"></div>{payload[1].value}</li>
     </ul></div>
   );}
+
+/**
+ * Barweight
+ * @param {number} data.day day
+ * @param {number} data.kilogram weight of the user
+ * @param {number} data.calories user calories 
+ */
+
+
 const Barweight = (props) => {
   const datamod=props.databar.map((data,index)=>{
   

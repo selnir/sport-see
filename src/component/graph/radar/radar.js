@@ -57,8 +57,11 @@ class CustomizedAxisTick extends PureComponent {
     }
   }
 
-
-
+/**
+ * RadarProfile
+ * @param {string} data.kind categories of the radar
+ * @param {number} data.value weight of the user
+ */
 const RadarProfile = (props) => {
     const datamod=props.dataradar.map((data,index)=>{
   
@@ -96,7 +99,7 @@ const RadarProfile = (props) => {
         <RadarChart cx="50%" cy="50%" outerRadius="60%" data={props.dataradar} paddingAngle={1000} startAngle="-150" endAngle="210">          
         <PolarGrid radialLines={false} strokeWidth={2} />
           <PolarAngleAxis dataKey="kind" tick={<CustomizedAxisTick/>} />
-          <Label alue="Pages of my website" offset={0} position="insideBottom"></Label>
+          <Label value="Pages of my website" offset={0} position="insideBottom"></Label>
           <Radar dataKey="value" fill="#FF0101B2" fillOpacity={0.99} />
         </RadarChart>
       </ResponsiveContainer></div>  );

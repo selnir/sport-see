@@ -100,6 +100,16 @@ const CustomTooltip = ({ active, payload }) => {
     return <Rectangle  x={x} y={y} width={width} height={height+150} fill="#000000" stroke="#000000" opacity={0.19}/>;
 };
 
+/**
+ * Timeline
+ * @param {number} data.day day
+ * @param {number} data.sessionLength session length
+
+ */
+
+
+
+
 const Timeline = (props) => {
 
   

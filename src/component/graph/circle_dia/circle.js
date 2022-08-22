@@ -18,6 +18,11 @@ class CustomLabel extends PureComponent{
   }
 }
 
+/**
+ * Circle
+ * @param {number} data value of the result of todayS
+ */
+
 const Circle = (props) => {
   let data = [
     {
