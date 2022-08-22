@@ -20,7 +20,7 @@ class CustomLabel extends PureComponent{
 
 /**
  * Circle
- * @param {number} data value of the result of todayS
+ * @param {number} data value of the today session 
  */
 
 const Circle = (props) => {
