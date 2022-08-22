@@ -127,7 +127,7 @@ const Timeline = (props) => {
       
       
       <CartesianGrid vertical={false} horizontal={false}    />
-    <XAxis dataKey="day" stroke={false} interval={0} height={100} label={<CustomLabel/>} tick={<CustomizedAxisTick/>}  />
+    <XAxis dataKey="day" stroke={"false"} interval={0} height={100} label={<CustomLabel/>} tick={<CustomizedAxisTick/>}  />
       <YAxis hide="true"/>
       <Tooltip content={<CustomTooltip />} cursor={<CustomCursor />} />
       <Line connectNulls type="monotone" dataKey="sessionLength" dot={false} activeDot={<CustomizedDot />}   strokeWidth={2} strokeLinecap="round" stroke="url(#gradient)" />

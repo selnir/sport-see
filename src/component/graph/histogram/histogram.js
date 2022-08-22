@@ -22,8 +22,8 @@ const renderLegend = (props) => {
     <div className='wrapper_legend'>
       <h1>Activité quotidienne</h1>
     <ul className='legend_bar'>
-      <li key={`item-${payload[0].id}`}><div class="cercle-black"></div>{payload[0].value}</li>
-      <li key={`item-${payload[1].id}`}><div class="cercle-red"></div>{payload[1].value}</li>
+      <li key={`item-${payload[0].id}`}><div className='cercle-black'></div>{payload[0].value}</li>
+      <li key={`item-${payload[1].id}`}><div className='cercle-red'></div>{payload[1].value}</li>
     </ul></div>
   );}
 
@@ -48,7 +48,7 @@ return (
           <BarChart data={datamod} margin={{ top:0, right: 10, left: 10, bottom: 10 }} >
     <CartesianGrid vertical={false} stroke="#ccc " strokeWidth={1} strokeDasharray={3} />
     <YAxis yAxisId="left" hide="false" orientation="left" />
-    <YAxis yAxisId="right" tickLine={false} orientation="right" tickMargin={10} stroke={false} tick={{ fill: '#9B9EAC' }} domain={['dataMin-3', 'dataMax+1']}></YAxis>
+    <YAxis yAxisId="right" tickLine={false} orientation="right" tickMargin={10} stroke={"false"} tick={{ fill: '#9B9EAC' }} domain={['dataMin-3', 'dataMax+1']}></YAxis>
     <XAxis dataKey="day"  tickLine={false} tickMargin={10} stroke='#9B9EAC' tick={{ fill: '#9B9EAC' }} >  </XAxis>
     <Tooltip content={<CustomTooltip />} wrapperStyle={{ backgroundColor: '#E60000' }}></Tooltip>
 

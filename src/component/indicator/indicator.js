@@ -16,6 +16,6 @@ function Indicator(props) {
   Indicator.propTypes = {
     img: PropTypes.string,
     name: PropTypes.string,
-    value: PropTypes.number,
+    value: PropTypes.string,
 }
   export default Indicator;
