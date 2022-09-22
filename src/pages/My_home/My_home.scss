@@ -1,8 +1,7 @@
 
 
 .My_home{
-  width: 100%;
-  height:100%;
+
   display: grid;
   grid-template-areas:
     "wrapper_header wrapper_header wrapper_header wrapper_header wrapper_header"
@@ -13,11 +12,11 @@
 
 
 
+
     footer{
 
       grid-area:footer;
       height: 5.375rem;
-      width: 100%;
 
 
     }
